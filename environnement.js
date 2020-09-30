@@ -87,21 +87,27 @@ function draw() {
                 }
             }
         }
-        fill(224, 189, 73);
-        square(currentNode.x * node_size, currentNode.y * node_size, node_size);
         fill(254, 219, 103);
         i = 0;
         while (i < closedList.length) {
             square(closedList[i].x * node_size, closedList[i].y * node_size, node_size);
             i++;
         }
+        fill(200, 50, 50);
+        square(nodes[0][0].x * node_size, nodes[0][0].y * node_size, node_size);
+        square(destinationNode.x * node_size, destinationNode.y * node_size, node_size);
+        fill(224, 189, 73);
+        square(currentNode.x * node_size, currentNode.y * node_size, node_size);
     } else {
         fill(50, 200, 50);
-        let comeFrom = currentNode;
+        let comeFrom = currentNode.pere;
         while (comeFrom != null) {
             square(comeFrom.x * node_size, comeFrom.y * node_size, node_size);
             comeFrom = comeFrom.pere;
         }
+        fill(200, 50, 50);
+        square(nodes[0][0].x * node_size, nodes[0][0].y * node_size, node_size);
+        square(destinationNode.x * node_size, destinationNode.y * node_size, node_size);
     }
     //draw
 }
