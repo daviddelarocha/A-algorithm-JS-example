@@ -63,7 +63,6 @@ function draw() {
         currentNode = minF(openList);
         if (currentNode == destinationNode) {
             openList.length = 0;
-            alert("We've reached it!");
         } else {
             openList.splice(openList.indexOf(currentNode), 1);
             for (i = currentNode.x - 1; i <= (currentNode.x + 1); i += 1) {
