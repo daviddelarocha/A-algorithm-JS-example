@@ -1,2 +1,2 @@
 # [daviddelarocha.github.io](https://daviddelarocha.github.io/A-algorithm-JS-example/)
-Graphic demo of A* algorithm.
+Visual demonstration of A* algorithm. Made with JavaScript.
